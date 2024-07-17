@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Chiccart-the destination for aesthics everywhere</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
+    <link rel="stylesheet" href="styleforhomepages.css" />
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+    <style>
+        .slideshow-container {
+            position: relative;
+            margin: auto;
+          }
+          /* The dots/bullets/indicators */
+          .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+          .active {
+            background-color: #717171;
+          }
+          /* Fading animation */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+          @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+    </style>
+</head>
+
+<body style="background-image: url(https://i.pinimg.com/originals/2a/e4/3c/2ae43c51449d2c92f57eecdd63c85521.jpg);">
+    <!-- MENU BAR -->
+    <header
+        style="background-image: url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+        <div id="reggDropdown">
+            <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+            <div id="drop" class="dropdown_class" style="margin-left: 40px;width:300px;font-size:15px;">
+                <a href="aboutus.xhtml" class="logo_side">About</a>
+                <a href="myprofile.xhtml" class="logo_side">Profile</a>
+                <a href="../paymentpage/contactus.xhtml" class="logo_side">Contact Us</a>
+            </div>
+            <img src="logo.png" alt="brandLogo" style="height: 110px; width: 110px;" />
+        </div>
+        <ul id="nav_bar">
+            <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+            <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+            <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+            <li><a href="../homepages/homeLiving.xhtml">home &amp; living</a></li>
+            <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+        </ul>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more" />
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+                <div id="drop">
+                    <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                    <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+                </div>
+                <i class="fa-regular fa-user"></i>
+                <span>profile</span>
+            </div>
+            <div onclick="wishlist_icon()">
+                <i class="fa-regular fa-heart"></i>
+                <span>wishlist</span>
+            </div>
+            <div onclick="bag_icon()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>cart</span>
+            </div>
+        </div>
+    </header>
+    <div class="slideshow-container" style="margin-top: 120px;">
+        <div class="mySlides fade">
+            <a href="../homepages/womenHomePage.xhtml"><img src="main_pic1.jpg" style="width:100%"/></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="../homepages/menHomePage.xhtml"><img src="main_pic2.jpg" style="width:100%"/></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="../homepages/womenHomePage.xhtml"><img src="main_pic3.jpg" style="width:100%"/></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="../homepages/womenHomePage.xhtml"><img src="main_pic4.jpg" style="width:100%"/></a>
+        </div>
+        <div class="mySlides fade">
+            <a href="../homepages/menHomePage.xhtml"><img src="main_pic5.jpg" style="width:100%"/></a>
+        </div>
+    </div>
+    <br/>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <h1>BEST OF CHICCART EXCLUSIVE BRANDS</h1>
+    <div id="best">
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/046147d1-1874-4c10-adb9-6dbd88b606e71644407437923-Kurtas-_Anouk-_Sangria_-_more.jpg" /></a>
+        </div>
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/76acf345-fc62-4b49-8b2c-9c0fc9c925311644407437977-Tops_-_Dressberry-_AAY_-_more.jpg" /></a>
+        </div>
+        <div><a href="../menspage/mensdata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3923c0c1-2260-4f0e-9598-15b6f9d7731c1644407437960-Roadster_and_H-N_Shirts.jpg" /></a>
+        </div>
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/201d1bfd-287e-47b6-bef6-3c46eac444a51644407437906-Jeans_-_Roadster-_M-H_and_more.jpg" /></a>
+        </div>
+        <div><a href="../menspage/mensdata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eff5a33f-ea24-4e70-84e5-ec4d25ee5c7b1644407437968-Roadster_and_KnK_Tshirts.jpg" /></a>
+        </div>
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/667a71f0-c24b-4a00-a98c-cc6a54a815e91644407437985-Tshirts_-_Roadster-_KnK_-_more.jpg" /></a>
+        </div>
+    </div>
+    <h1>CATEGORIES TO BAG</h1>
+    <div id="categories">
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aa4658b5-d723-4652-9ea1-00456b355c3a1645602467046-Kurta-Sets.jpg" /></a>
+        </div>
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aae4be67-e611-47f4-b94e-92a16a36df731645602467007-Hangbags.jpg" /></a>
+        </div>
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0f0be09e-4155-47bf-82e1-51044e7e7fd11645602467052-Kurtas.jpg" /></a>
+        </div>
+        <div><a href="../menspage/mensdata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/dd4414f8-4e1b-4a22-997e-8e06c0a5ff861645602467167-T-Shirts.jpg" /></a>
+        </div>
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f9ca5609-b634-42d4-8c08-a8eaebb818b71645602467085-Sarees.jpg" /></a>
+        </div>
+        <div><a href="../menspage/mensdata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0b7869d4-f825-4625-b1db-58ad10a45f301645602467093-Shirts.jpg" /></a>
+        </div>
+    </div>
+    <div id="categories">
+        <div><a href="../womenspage/womendata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b34a30a6-504b-4c94-b7e1-61391d536bc51645602467038-Jewellery.jpg" /></a>
+        </div>
+        <div><a href="../kids/kiddata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b156f76a-26e7-4bce-9941-8a67d3c16f331645602467120-Teens-Wear.jpg" /></a>
+        </div>
+        <div><a href="../beautypage/beautydata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/fb091b07-c275-4578-b08d-b4f93dfe9e841645602466976-Beauty.jpg" /></a>
+        </div>
+        <div><a href="#"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b827f900-ed61-4467-84fa-a6e357787e761645602467079-Plus-Size-Styles_W.jpg" /></a>
+        </div>
+        <div><a href="#"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/cd083042-3bb2-4231-8b96-0234fc0ed23f1645602467032-Jeans.jpg" /></a>
+        </div>
+        <div><a href="#"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/736f3951-e67b-414f-bfb1-56e2794d441d1645602467114-Sports-Shoes.jpg" /></a>
+        </div>
+        <div><a href="#"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d13255df-c846-4dbd-8458-77ccaba4f9eb1645602467142-Trousers.jpg" /></a>
+        </div>
+        <div><a href="../menspage/mensdata.xhtml"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/7a774194-94e6-49b5-b8bb-64bf9901bc671645602466989-Casual-Shoes.jpg" /></a>
+        </div>
+        <div><a href="#"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/5860c3c2-a639-4625-ac1d-4d55406f128a1645602467134-Track-Pants.jpg" /></a>
+        </div>
+        <div><a href="#"><img
+                    src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/07e5c29a-2eab-4b2d-b617-6565ffe1f4701645602467025-Innerwear.jpg" /></a>
+        </div>
+    </div>
+    <!-- FOOTER SECTION -->
+    <footer>
+        <section id="section_1">
+            <div id="left">
+                <div>
+                    <h4>online shopping</h4>
+                    <p>men</p>
+                    <p>women</p>
+                    <p>home &amp; living</p>
+                    <p>beauty</p>
+                    <p>gift cards</p>
+                </div>
+                <div>
+                    <h4>useful links</h4>
+                    <p>men</p>
+                    <p>faq</p>
+                    <p>t&amp;c</p>
+                    <p>terms of use</p>
+                    <p>track order</p>
+                    <p>shipping</p>
+                    <p>cancellation</p>
+                    <p>returns</p>
+                    <p>whitehat</p>
+                    <p>blog</p>
+                    <p>careers</p>
+                    <p>privacy policy</p>
+                    <p>site map</p>
+                    <p>corporate information</p>
+                </div>
+                <div>
+                    <h4>experience chiccart app on mobile</h4>
+                    <img src="https://bit.ly/3LluZ4L" alt="android" />
+                    <img src="https://bit.ly/3DmWQys" alt="ios" />
+                    <h4 id="social_connect">keep in touch</h4>
+                    <div>
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <img src="https://bit.ly/3JPiL47" alt="original" />
+                    <p> <span>100% ORIGINAL</span> guarantee for all products at chiccart.com</p>
+                </div>
+                <div>
+                    <img src="https://bit.ly/3uBalH4" alt="return_policy" />
+                    <p><span>Return within 30days</span> of receiving your order</p>
+                </div>
+            </div>
+        </section>
+        <section id="section_4">
+            <p>In case of any concern <a href="../paymentpage/contactus.xhtml"> contact us</a></p>
+            <p>&#169; 2023 www.chiccart.com. All rights reserved.</p>
+        </section>
+    </footer>
+    <script>
+        //<![CDATA[
+        function wishlist_icon() {
+            window.location.href = "../wishlist/wishlist.xhtml"
+        }
+        function bag_icon() {
+            window.location.href = "../wishlist/cart.xhtml"
+        }
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    //]]>
+    </script>
+</body>
+
+</html>

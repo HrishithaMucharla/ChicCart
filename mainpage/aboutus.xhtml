@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Chiccart-About Us</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styleforhomepages.css"/>
+    <style>
+        .mainbox{
+            margin-top: 150px;
+            margin-left: 10px;
+        }
+        .logomain{
+            margin-left: 600px;
+            margin-top: 20px;
+        }
+        h1{
+            margin-top: 60px;
+            font-size: 50px;
+            font-family: ink free;
+            margin-left: 350px;
+        }
+        .content1{
+            font-size: 25px;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+            font-family: 'ink free'; 
+        }
+        #abtusbox >#category2{  
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "one2 two2 three2";
+            row-gap: 5rem;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        #category2 div:nth-child(1){
+            grid-area: one2;
+        }
+        #category2 div:nth-child(2){
+            grid-area: two2;
+        }
+        #category2 div:nth-child(3){
+            grid-area: three2;
+        }
+        #category2 img{
+            transition: 300ms all ease-in-out;
+        }
+        #category2 > div{
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #category2 > div:hover img{
+            transform:  scale(1.08);
+        }
+        .twoboxes{
+            margin-top: 100px;
+            margin-left: 150px;
+            margin-right: 150px;
+            display: flex;
+        }
+        .twopics{
+            margin-top: 50px;
+            margin-left: 260px;
+            margin-right: 100px;
+            display: flex;
+            gap: 4rem;
+        }
+        .rightbox{
+            margin-left: 50px;
+        }
+        h3{
+            font-size: 50px;
+            font-family: 'ink free';
+        }
+        #content2{
+            margin-top: 30px;
+            font-size: 25px;
+            font-family: 'ink free';
+        }
+        #content3{
+            margin-top: 30px;
+            font-size: 25px;
+            font-family: 'ink free';
+        }
+        .smallbox{
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .titlebox{
+            margin-top: 30px;
+        }
+        .box1{
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 60px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+     <!-- MENU BAR -->
+     <header style="background-image: url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+        <div id="logo">
+            <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+        </div>
+        <ul id="nav_bar">
+            <li id="megamenu_container"><a href="menHomePage.xhtml">men</a></li>
+            <li><a href="womenHomePage.xhtml">women</a></li>
+            <li><a href="kidshomepage.xhtml">kids</a></li>
+            <li><a href="homeLiving.xhtml">home &amp; living</a></li>
+            <li><a href="beautyhomepage.xhtml">beauty</a></li>
+        </ul> 
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more"/>
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+              <div id="drop">
+                  <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                  <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+              </div>
+              <i class="fa-regular fa-user" ></i>
+                <span>profile</span>
+            </div>
+            <div onclick="wishlist_icon()">
+                <i class="fa-regular fa-heart" ></i>
+                <span>wishlist</span>
+            </div>
+            <div onclick="bag_icon()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Cart</span>
+            </div>
+        </div>
+</header>
+<!--about us section-->
+<div class="mainbox">
+    <!--<div class="aboutusimg">
+        <img src="aboutus.jpg" alt="image not found" height="400px" width="1500px"/>
+    </div>-->
+    <div class="logomain">
+        <img src="logo_main.png" alt="image not found" />
+    </div>
+    <div id="abtusbox">
+        <div class="heading">
+            <h1>THE FACES BEHIND THE FASHION</h1>
+        </div>
+        <div id="category2">
+            <div style="width:30rem;height:30rem; border-radius:50%;"><img src="hrishitha.jpeg" alt="category1" height="300px" width="300px"/></div>
+            <div style="width:30rem;height:30rem;border-radius:50%"><img src="vaishnavi.jpeg" alt="category2" height="300px" width="300px"/></div>
+            <div style="width:30rem;height:30rem;border-radius:50%"><img src="shivani.jpeg" alt="category3" height="300px" width="300px"/></div>
+        </div>
+        <div id="category2">
+            <div style="margin-left:65px;font-size:30px;font-family:ink free;"><h4>HRISHITHA</h4></div>
+            <div style="margin-left:75px;font-size:30px;font-family:ink free;"><h4>VAISHNAVI</h4></div>
+            <div style="margin-left:95px;font-size:30px;font-family:ink free;"><h4>SHIVANI</h4></div>
+        </div>
+        <div class="content1">
+            <p align="center">With the trendiest, freshest, and most unique styles from across India and the world, CHICCART invites you to express your personal style fearlessly, and with a confidence and optimism that cannot be easily shaken.</p>
+        </div>
+        <div class="twoboxes">
+            <div class="leftbox">
+                <img src="pic1.jpg" alt="img not found" height="500px" width="500px"/>
+            </div>
+            <div class="rightbox">
+                <h3 align="center">THE CHICCART FASHION EXPERIENCE</h3>
+                <p id="content2">We are about to launch The CHICCART Fashion, as a curated and managed marketplace with an endeavor to inspire consumers to make fashion and lifestyle choices that best suit them. We have a wide assortment of offerings, across price points, to cater to women, men and children of diverse demographics. We merchandise across several categories including western wear, Indian wear, lingerie, footwear, bags, jewelry, accessories, home décor, bath, bed and kitchen in order to cater to the diverse consumers journeys across our platform. We offer a mix of brands across established national brands, international brands, luxury brands, and emerging labels and designers.</p>
+            </div>
+        </div>
+        <div class="smallbox">
+            <div class="titlebox" align="center">
+                <h3>WHAT MAKES US EXCEPTIONAL</h3>
+            </div>
+            <div class="inside">
+                <p id="content3" align="center">While we offer a wide range of products, we place strong emphasis on curation. We identify fashion-forward brands, vetting for style and quality, and further select styles within these brands to offer. We also place importance on selling full-price products, reducing reliance on discounting, and selling the latest season’s designs.</p>
+            </div>
+            <div class="twopics">
+                <div class="pic1">
+                    <img src="pic2.jpg" alt="img not found" height="400px" width="400px"/>
+                </div>
+                <div class="pic2">
+                    <img src="pic3.jpg" alt="img not found" height="400px" width="400px"/>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="leftbox1" style="margin-right: 20px;">
+                <h3 align="center" style="font-size: 35px;">Capsule Collections</h3>
+                <p align="center" style="font-size: 20px;font-family:ink free;margin-top:10px">If there’s an occasion to express your personal style, we’ve got a capsule collection to match. Shopping for a specific mood, event or style story has never been easier.</p>
+            </div>
+            <div class="rightbox1" style="margin-left: 20px;">
+                <h3 align="center" style="font-size: 35px;">The Indie Experience</h3>
+                <p align="center" style="font-size: 20px;font-family:ink free;margin-top:10px">Our Indie styles are literally art you can wear. They are carefully handpicked, so that only the most authentic, handcrafted pieces by artisans across the country and globe make the cut.</p>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="leftbox1" style="margin-right: 20px;">
+                <h3 align="center" style="font-size: 35px;">#CHICCARTtoday</h3>
+                <p align="center" style="font-size: 20px;font-family:ink free;margin-top:10px">Our daily trend spotlight that lets you in on what’s hip and happening, and what you should be carting right now. Like they say, a trend each day keeps the blues away!</p>
+            </div>
+            <div class="rightbox1" style="margin-left: 20px;">
+                <h3 align="center" style="font-size: 35px;">#CHICCARTrecommends</h3>
+                <p align="center" style="font-size: 20px;font-family:ink free;margin-top:10px">From the hailstorm of trends coming down on us every season, we only recommend the ones guaranteed to put you on the hit list. Watch out for these regular highlights.</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 100px;">
+        <img src="footer.jpg" alt="img not found" width="1500px" height="150px"/>
+    </div>
+</div>
+<!-- FOOTER SECTION -->
+<footer>
+    <section id="section_1">
+        <div id="left">
+            <div>
+                <h4>online shopping</h4>
+                <p>men</p>
+                <p>women</p>
+                <p>home &amp; living</p>
+                <p>beauty</p>
+                <p>gift cards</p>
+            </div>
+            <div>
+                <h4>useful links</h4>
+                <p>men</p>
+                <p>faq</p>
+                <p>t&amp;c</p>
+                <p>terms of use</p>
+                <p>track order</p>
+                <p>shipping</p>
+                <p>cancellation</p>
+                <p>returns</p>
+                <p>whitehat</p>
+                <p>blog</p>
+                <p>careers</p>
+                <p>privacy policy</p>
+                <p>site map</p>
+                <p>corporate information</p>
+            </div>
+            <div>
+                <h4>experience chiccart app on mobile</h4>
+                <img src="https://bit.ly/3LluZ4L" alt="android" />
+                <img src="https://bit.ly/3DmWQys" alt="ios" />
+                <h4 id="social_connect">keep in touch</h4>
+                <div>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div>
+                <img src="https://bit.ly/3JPiL47" alt="original" />
+                <p> <span>100% ORIGINAL</span> guarantee for all products at chiccart.com</p>
+            </div>
+            <div>
+                <img src="https://bit.ly/3uBalH4" alt="return_policy" />
+                <p><span>Return within 30days</span> of receiving your order</p>
+            </div>
+        </div>
+    </section>
+    <section id="section_4">
+        <p>In case of any concern <a href="../paymentpage/contactus.xhtml"> contact us</a></p>
+        <p>&#169; 2023 www.chiccart.com. All rights reserved.</p>
+    </section>
+</footer>
+<script>
+    //<![CDATA[
+    function wishlist_icon() {
+        window.location.href = "../wishlist/wishlist.xhtml"
+    }
+    function bag_icon() {
+        window.location.href = "../wishlist/cart.xhtml"
+    }
+//]]>
+</script>
+</body>
+</html>

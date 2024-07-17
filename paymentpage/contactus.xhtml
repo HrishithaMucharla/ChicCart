@@ -1,0 +1,203 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Contact Us</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
+    <link rel="stylesheet" href="contactus.css" />
+    <link rel="stylesheet" href="styleforhomepages.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+</head>
+<body>
+    <header style="background:url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+        <div id="logo">
+            <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+        </div>
+        <ul id="nav_bar">
+            <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+            <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+            <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+            <li><a href="../homepages/homeLiving.xhtml">home living</a></li>
+            <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+        </ul>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more" />
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i> 
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+                <div id="drop">
+                    <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                    <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+                </div>
+                <i class="fa-regular fa-user"></i>
+                <span>profile</span>
+            </div>
+            <div onclick="wishlist_icon()">
+                <i class="fa-regular fa-heart"></i>
+                <span>wishlist</span>
+            </div>
+            <div onclick="bag_icon()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>cart</span>
+            </div>
+        </div>
+    </header>
+    <div class="mainbox">
+        <!--header box-->
+        <div class="headerbox">
+            <div class="leftbox">
+                <div class="leftboxtext">
+                    <h3>HELP CENTER</h3>
+                </div>
+                <div class="leftboxcontent">
+                    <p>We are here to help you</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="rightboxleft">
+                    <div class="rightboxleftheader">
+                        <h3>TRACK, CANCEL, RETURN/EXCHANGE</h3>
+                    </div>
+                    <div class="rightboxleftcontents">
+                        <p>Manage your purchases</p>
+                    </div>
+                </div>
+                <div class="rightboxright">
+                    <div class="rightboxrightcontents">
+                        <a href="../wishlist/cart.xhtml">ORDERS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="color: #d5dade;; width: 90%; height: 0px"/>
+        <div class="querybox">
+            <div class="queryquestions">
+                <div class="query">
+                    <h3 style="margin-top: 20px;">SELECT QUERY TYPE</h3>
+                </div>
+                <div class="a">
+                    <span class="aclass">Order related queries</span>
+                    <span class="symbola"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+                
+                <div class="b">
+                    <span class="bclass">Non-order related queries</span>
+                    <span class="symbolb"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+                
+                <div class="c">
+                    <span class="cclass">Recent issues</span>
+                    <span class="symbolc"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+                <br/>
+                <br/>
+                <hr style="background-color: rgb(178, 172, 172); width: 90%"/>
+                <div class="a">
+                    <span class="dclass">Frequently Asked Question</span>
+                    <span class="symbold"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+            </div>
+            <div class="queryanswers">
+                <div class="query1">
+                    <h4 style="margin-top: 30px;">SELECT A QUERY</h4>
+                </div>
+                <hr style="background-color: rgb(178, 172, 172); width: 90%"/>
+                <div class="a1">
+                    <span class="a1class">Payment/Refund</span>
+                    <span class="symbola1"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+                <hr style="background-color: rgb(178, 172, 172); width: 90%"/>
+                <div class="b1">
+                    <span class="b1class">Offers , Discounts , Coupons</span>
+                    <span class="symbolb1"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+                <hr style="background-color: rgb(178, 172, 172); width: 90%"/>
+                <div class="c1">
+                    <span class="c1class">Manage Your Account</span>
+                    <span class="symbolc1"><a href="#" class="symbolalink">&gt;</a></span>
+                </div>
+                <hr style="background-color: rgb(178, 172, 172); width: 90%"/>
+                <div class="d1">
+                    <span class="d1class" >Others</span>
+                    <span class="symbold1"><a href="#" class="symbolalink">&gt;</a></span>
+                    <span>&emsp;&emsp;</span>
+                </div>
+                <br/> 
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER SECTION -->
+  <footer>
+    <section id="section_1">
+        <div id="left">
+            <div>
+                <h4>online shopping</h4>
+                <p>men</p>
+                <p>women</p>
+                <p>home living</p>
+                <p>beauty</p>
+                <p>gift cards</p>
+            </div>
+            <div>
+            <h4>useful links</h4>
+            <p>men</p>
+            <p>faq</p>
+            <p>tc</p>
+            <p>terms of use</p>
+            <p>track order</p>
+            <p>shipping</p>
+            <p>cancellation</p>
+            <p>returns</p>
+            <p>whitehat</p>
+            <p>blog</p>
+            <p>careers</p>
+            <p>privacy policy</p>
+            <p>site map</p>
+            <p>corporate information</p>
+            </div>
+            <div>
+                <h4>experience chiccart app on mobile</h4>
+                <img src="https://bit.ly/3LluZ4L" alt="android"/>
+                <img src="https://bit.ly/3DmWQys" alt="ios" />
+                <h4 id="social_connect">keep in touch</h4>
+                <div>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div>
+                <img src="https://bit.ly/3JPiL47" alt="original"/>
+                <p> <span>100&percnt; ORIGINAL</span> guarantee for all products at chiccart.com</p>
+            </div>
+            <div>
+                <img src="https://bit.ly/3uBalH4" alt="return_policy"/>
+                <p><span>Return within 30days</span> of receiving your order</p>
+            </div>
+        </div>
+    </section>
+    <section id="section_4">
+        <p>In case of any concern <a href="contactus.xhtml"> contact us</a></p>
+        <p style="color:rgb(113, 36, 36)">&#169; 2023 www.chiccart.com. All rights reserved.</p>
+    </section>
+</footer>
+<script>
+    //<![CDATA[
+    function wishlist_icon() {
+        window.location.href = "../wishlist/wishlist.xhtml"
+    }
+    function bag_icon() {
+        window.location.href = "../wishlist/cart.xhtml"
+    }
+    //]]>
+</script>
+</body>
+</html>

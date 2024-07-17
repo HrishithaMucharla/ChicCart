@@ -1,0 +1,213 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="cart.css" />
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+
+</head>
+
+<body>
+    <div id="upperbar" style="background-color: lavender;">
+        <div>
+            <img src="logo.png" alt="brandLogo" id="landingPage" height="100px" width="100px" />
+        </div>
+        <div>
+            <p> <span id="first"><a href="cart.xhtml" style="text-decoration: none;color:rgb(137, 137, 191)">BAG </a></span>--------- <span id="second"><a href="../paymentpage/adresspage.xhtml" style="text-decoration: none; color:black;">ADDRESS</a></span> --------- <span><a href="../paymentpage/paymentpage.xhtml" style="text-decoration: none; color:black">PAYMENT</a></span>
+            </p>
+        </div>
+        <div>
+            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="" />
+            <span>100&percnt; SECURE</span>
+        </div>
+    </div>
+
+    <div id="timerbox">
+        <p>Sale Starts in <span> 3 </span> Days</p>
+    </div>
+    <div class="con_ord">
+        <div class="container">
+
+        </div>
+
+        <div class="orderbox">
+            <div class="pricedets">PRICE DETAILS</div>
+            <div class="total">
+                <span>Total MRP</span><span class="totalprice">--</span>
+            </div>
+            <div class="discount">
+                <span>Discount on MRP</span><span class="filldiscount">--</span>
+            </div>
+
+            <div class="amount">
+                <span>Total Amount</span><span class="amount_pay">--</span>
+            </div>
+            <p>&emsp;<input type="text" class="inputclass" id="codeId" placeholder="Enter Promo Code" /> </p>
+            <span id="pro"></span>
+            <div class="promocode">
+            
+
+                <input type="text" id="promo" placeholder="CHICCART300" />
+                <div class="apply" onclick="apply_code()">Apply</div>
+            </div>
+            <div class="makeorder" onclick="place_order()">PLACE ORDER</div>
+        </div>
+    </div>
+
+
+    <div class="wishlistlink" style="background-color: lavender;">
+        <i class="fa-duotone fa-cart-flatbed fa-solid"></i>
+        <a href="wishlist.xhtml" class="wishlistlink1">Add More From Wishlist</a>
+    </div>
+
+    <script>
+        //<![CDATA[
+
+        //TO VALIDATE THE APPLIED CODE!!!!!!!!!
+        function apply_code()
+        {
+            var code_valid=document.getElementById('codeId').value;
+            if (!code_valid.match('CHICCART')){
+                alert(" Please enter a valid code");
+                return false;
+            }
+            else{
+                document.getElementById('pro').innerHTML="<span style='color:red;font-size:12px;margin-left:10px'>PROMO CODE APPLIED ✔</span>"
+            }
+        }
+
+        //PLACE ORDER CODE
+
+
+        var cartarr = JSON.parse(localStorage.getItem("BagListObj")) || [];
+
+        var itemcount = cartarr.length;
+        localStorage.setItem("itemcount", itemcount)
+
+        var MRP = cartarr.reduce(function (sum, a, ind) {
+            return sum + +(cartarr[ind].strikedoffprice.split(" ")[1])
+        }, 0);
+        localStorage.setItem("MRP", MRP)
+
+        var amount = cartarr.reduce(function (sum, a, ind) {
+            return sum + +(cartarr[ind].price.split(" ")[1])
+        }, 0);
+        localStorage.setItem("amount", amount)
+
+        var discount = MRP - amount;
+        localStorage.setItem("discount", discount)
+
+        document.querySelector(".amount_pay").innerText = amount;
+        document.querySelector(".filldiscount").innerText = "- " + discount;
+        document.querySelector(".totalprice").innerText = MRP;
+        document.querySelector(".pricedets").innerText = `PRICE DETAILS ( ${itemcount} Items)`;
+
+        function place_order(){
+            
+            if (itemcount==0){
+                alert("OPPs your cart is empty to place an order!!!!!!");
+                return false;
+            }
+            else{
+                window.location.href="../paymentpage/adresspage.xhtml";
+            }
+        }
+
+        cartarr.map(function (ele, ind) {
+            // document.querySelector(".container").innerText = "" 
+            var box = document.createElement("div");
+            box.className = "main"
+
+
+            var imgbox = document.createElement("div");
+
+            var image = document.createElement("img");
+            image.src = ele.image_url
+            imgbox.append(image)
+
+            var detailsbox = document.createElement("div");
+
+            var name = document.createElement("p");
+            name.innerText = ele.brand
+            name.style.fontSize = "20px";
+            name.style.marginBottom = "-8px"
+
+
+            var para = document.createElement("p");
+            para.innerText = ele.para;
+            para.style.color = "gray"
+
+            var price = document.createElement("span");
+            price.innerText = ele.price
+
+            var strikedprice = document.createElement("span");
+            strikedprice.innerText = ele.strikedoffprice;
+            strikedprice.style.textDecoration = "line-through";
+            strikedprice.style.color = "gray";
+
+            var offer = document.createElement("span");
+            offer.innerText = ele.offer;
+            offer.style.color = "red";
+            var pricepara = document.createElement("p");
+            pricepara.append(price, strikedprice)
+            detailsbox.append(name, para, pricepara, offer)
+            var buttonbox = document.createElement("div");
+            var remove = document.createElement("button");
+            remove.innerText = "REMOVE";
+            remove.addEventListener("click", function () {
+                removeitem(ind)
+            })
+            buttonbox.append(remove)
+            box.append(imgbox, detailsbox, buttonbox)
+            document.querySelector(".container").append(box)
+        })
+        document.querySelector(".wishlistlink").addEventListener("click", sendtowish)
+        function sendtowish() {
+            window.location.href = "wishlist.xhtml"
+        }
+        function removeitem(ind) {
+            cartarr.splice(ind, 1);
+            localStorage.setItem("BagListObj", JSON.stringify(cartarr))
+            window.location.href = "cart.xhtml";
+        }
+        /*document.querySelector(".makeorder").addEventListener("click", profile)
+
+        function profile() {
+            window.location.href = "../profile_page/signup_page.xhtml";
+        }*/
+
+
+        document.querySelector(".apply").addEventListener("click", discountfun);
+        function discountfun() {
+            var payable_amount = +(localStorage.getItem("amount"));
+            var int_promo = document.querySelector("#promo").value;
+            if (payable_amount > 300 && int_promo == "CHICCART300") {
+                amount = amount - 300;
+                discount = discount + 300;
+                localStorage.setItem("amount", amount);
+                localStorage.setItem("discount", discount)
+                document.querySelector(".amount_pay").innerText = amount;
+                document.querySelector(".filldiscount").innerText = "- " + discount;
+                document.querySelector(".apply").removeEventListener("click", discountfun);
+            }
+            // console.log( amount, discount)
+        }
+        document.getElementById('landingPage').addEventListener('click', function () {
+            window.location.href = "../mainpage/mainpage.xhtml";
+        })
+        document.querySelector("#second").addEventListener("click", function () {
+            window.location.href = "../profile_page/signup_page.xhtml";
+        })
+        //]]>
+    </script>
+</body>
+
+</html>

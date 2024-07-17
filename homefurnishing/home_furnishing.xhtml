@@ -1,0 +1,709 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>Chiccart-the destination for aesthics everywhere</title>
+  <link rel="shortcut icon" type="image/jpg" href="logo.png" />
+  <link rel="stylesheet" href="home_furnishing.css" />
+  <link rel="stylesheet" href="styleforhomepages.css" />
+  <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+</head>
+
+<body>
+  <!-- MENU BAR -->
+  <header style="background-image: url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+    <div id="logo">
+      <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+    </div>
+    <ul id="nav_bar">
+      <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+      <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+      <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+      <li><a href="../homepages/homeLiving.xhtml">home &amp; living</a></li>
+      <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+
+    </ul>
+    <div id="search">
+      <input type="text" id="search_bar" placeholder="Search for products, brands and more" />
+      <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+    </div>
+    <div id="right_icon">
+      <div id="reggDropdown">
+        <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+        <div id="drop">
+          <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+          <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+        </div>
+        <i class="fa-regular fa-user"></i>
+        <span>profile</span>
+      </div>
+      <div onclick="wishlist_icon()">
+        <i class="fa-regular fa-heart"></i>
+        <span>wishlist</span>
+      </div>
+      <div onclick="bag_icon()">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Cart</span>
+      </div>
+    </div>
+  </header>
+
+  <div id="sorting">
+
+    <select class="filter" id="brandFilter">
+      <option id="normal" value="all">FILTER BY BRAND</option>
+      <option value="DREAM WEAVERZ">DREAM WEAVERZ</option>
+      <option value="KLOTTHE">KLOTTHE</option>
+      <option value="SEJ By Nisha Gupta">SEJ By Nisha Gupta</option>
+      <option value="JAIPUR FABRIC">JAIPUR FABRIC</option>
+      <option value="PUMA">PUMA</option>
+      <option value="Arrabi">Arrabi</option>
+      <option value="Home Ecstasy">Home Ecstasy</option>
+      <option value="ELEVANTO">ELEVANTO</option>
+      <option value="LA VERNE">LA VERN</option>
+      <option value="FLORIDA">FLORIDA</option>
+      <option value="Dreamscape">Dreamscape</option>
+      <option value="Trident">Trident</option>
+    </select>
+
+    <select class="filter" id="priceSort">
+      <option value="---">SORT BY PRICE</option>
+      <option value="lth">Low → High</option>
+      <option value="htl">High → Low</option>
+    </select>
+
+    <select class="filter" id="nameSort">
+      <option value="---">SORT BY NAME</option>
+      <option value="asc">Ascending</option>
+      <option value="dsc">Descending</option>
+    </select>
+
+  </div>
+
+  <div id="wrapper">
+    <div id="filter">
+      <div class="a">
+        <h3>FILTERS </h3>
+        <div>
+          <input type="radio" id="rb" name="group" />
+          <label for="sagar">Men</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">Women</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">Boys</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">Girls</label>
+        </div>
+
+      </div>
+      <div class="b">
+        <h3>CATEGORIES</h3>
+        <div>
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Bedsheets</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Cushion Covers</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Curtain and Sheers</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Wall Art</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Blankets Quits and Dohars</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Clocks</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Orgaisers</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">bath Towels</label>
+        </div>
+
+      </div>
+      <div class="b">
+        <h3>BRAND</h3>
+        <div>
+          <input type="checkbox" id="sagar" name="group" />
+          <label for="cb">KLOTTHE</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Story@home</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Arrabi</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Cortina</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">BIANCA</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Home Center</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">ROMME</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Kuber Industries</label>
+        </div>
+
+      </div>
+      <div class="b">
+        <h3>PRICE</h3>
+        <div>
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Rs. 50 to Rs. 22838</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Rs. 22838 to Rs. 45626</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Rs. 45626 to Rs. 68414</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Rs. 68414 to Rs. 91202</label><br />
+        </div>
+
+      </div>
+      <div class="b">
+        <h3>COLOR</h3>
+        <div>
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Blue</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">White</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Brown</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Multi</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Black</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Gray</label><br />
+          <input type="checkbox" id="cb" name="group" />
+          <label for="cb">Green</label><br />
+        </div>
+
+      </div>
+      <div class="c">
+        <h3>DISCOUNT RANGE</h3>
+        <div>
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">10% and above</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">20% and above</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">30% and aboves</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">40% and above</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">50% and above</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">60% and above</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">70% and above</label><br />
+          <input type="radio" id="rb" name="group" />
+          <label for="rb">80% and above</label><br />
+        </div>
+
+      </div>
+    </div>
+
+    <div id="container"></div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <section id="section_1">
+      <div id="left">
+        <div>
+          <h4>online shopping</h4>
+          <p>men</p>
+          <p>women</p>
+          <p>home &amp; living</p>
+          <p>beauty</p>
+          <p>gift cards</p>
+        </div>
+        <div>
+          <h4>useful links</h4>
+          <p>men</p>
+          <p>faq</p>
+          <p>t&amp;c</p>
+          <p>terms of use</p>
+          <p>track order</p>
+          <p>shipping</p>
+          <p>cancellation</p>
+          <p>returns</p>
+          <p>whitehat</p>
+          <p>blog</p>
+          <p>careers</p>
+          <p>privacy policy</p>
+          <p>site map</p>
+          <p>corporate information</p>
+        </div>
+        <div>
+          <h4>experience chiccart app on mobile</h4>
+          <img src="https://bit.ly/3LluZ4L" alt="android" />
+          <img src="https://bit.ly/3DmWQys" alt="ios" />
+          <h4 id="social_connect">keep in touch</h4>
+          <div>
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-twitter-square"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div>
+          <img src="https://bit.ly/3JPiL47" alt="original" />
+          <p> <span>100% ORIGINAL</span> guarantee for all products at chiccart.com</p>
+        </div>
+        <div>
+          <img src="https://bit.ly/3uBalH4" alt="return_policy" />
+          <p><span>Return within 30days</span> of receiving your order</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="section_4">
+      <p>In case of any concern <a href="../paymentpage/contactus.xhtml"> contact us</a></p>
+      <p>&#169; 2023 www.chiccart.com. All rights reserved.</p>
+    </section>
+  </footer>
+  <script>
+    //<![CDATA[
+    function wishlist_icon() {
+      window.location.href = "../wishlist/wishlist.xhtml"
+    }
+    function bag_icon() {
+      window.location.href = "../wishlist/cart.xhtml"
+    }
+
+
+
+    var funitureData = [
+      {
+        image_url:
+          "https://bit.ly/36VAF6m",
+        brand: "DREAM WEAVERZ",
+        para: "300 TC Cotton 1 King BedSheet",
+        rs: 623,
+        price: "Rs. 623",
+        strikedoffprice: "Rs. 2599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3wJgLGM",
+        brand: "KLOTTHE",
+        para: "Purple Geometric King Bedsheet",
+        rs: 758,
+        price: "Rs. 758",
+        strikedoffprice: "Rs. 3299",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3wR8oZJ",
+        brand: "SEJ By Nisha Gupta",
+        para: "White & Pink King Bedsheet",
+        rs: 759,
+        price: "Rs. 759",
+        strikedoffprice: "Rs. 1999",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/35khX87",
+        brand: "JAIPUR FABRIC",
+        para: "Pink 180TC Cotton Bedsheet",
+        rs: 1199,
+        price: "Rs. 1199",
+        strikedoffprice: "Rs. 2599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3NvN01V",
+        brand: "Puma",
+        para: "Unisex Green Solid Anti-Slip",
+        rs: 674,
+        price: "Rs. 674",
+        strikedoffprice: "Rs. 1499",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3qKLDTt",
+        brand: "Arrabi",
+        para: "Beige & Blue Floral Bedsheet",
+        rs: 998,
+        price: "Rs. 998",
+        strikedoffprice: "Rs. 3329",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3tOZvxX",
+        brand: "Home Ecstasy",
+        para: "300 TC Cotton 1 King BedSheet",
+        rs: 623,
+        price: "Rs. 623",
+        strikedoffprice: "Rs. 2599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3Lqrha4",
+        brand: "LA VERNE",
+        para: "Set of 5 White Cushion Fillers",
+        rs: 799,
+        price: "Rs. 799",
+        strikedoffprice: "Rs. 1199",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3tOftZ9",
+        brand: "KLOTTHE",
+        para: "Multicoloured Cotton 1 King",
+        rs: 799,
+        price: "Rs. 799",
+        strikedoffprice: "Rs. 3999",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+
+      {
+        image_url:
+          "https://bit.ly/3wJjTCw",
+        brand: "Florida",
+        para: "Yellow & Blue Geometric Bedsheet",
+        rs: 554,
+        price: "Rs. 554",
+        strikedoffprice: "Rs. 1499",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3qLCqdE",
+        brand: "Dreamscape",
+        para: "Blue Ethnic No 1 cotton Bedsheet",
+        rs: 899,
+        price: "Rs. 899",
+        strikedoffprice: "Rs. 1999",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3tOqXf9",
+        brand: "Varde",
+        para: "Blue 180 TC No 1 Cotton Covers",
+        rs: 749,
+        price: "Rs. 749",
+        strikedoffprice: "Rs. 849",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3wIEUgF",
+        brand: "Kuber Industries",
+        para: "Set Of 6 Red Printed Storage",
+        rs: 674,
+        price: "Rs. 674",
+        strikedoffprice: "Rs. 2599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/36TM7j1",
+        brand: "Rajasthan Decor",
+        para: "Black & White Abstract Bedsheet",
+        rs: 866,
+        price: "Rs. 866",
+        strikedoffprice: "Rs. 1499",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3wKg6VB",
+        brand: "Trident",
+        para: "Teal Blue Solid Pure Cotton Towel",
+        rs: 549,
+        price: "Rs. 549",
+        strikedoffprice: "Rs. 999",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3LswG03",
+        brand: "LA VERNE",
+        para: "Set of 2 White Striped Pillow",
+        rs: 599,
+        price: "Rs. 599",
+        strikedoffprice: "Rs. 1999",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/36BnaJr",
+        brand: "TRIBAN By Decathlon",
+        para: "Black Solid Mobility Plastic Bottle",
+        rs: 159,
+        price: "Rs. 159",
+        strikedoffprice: "Rs. 199",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3uBDaD5",
+        brand: "Clasiko",
+        para: "Teal & White Floral Comforter",
+        rs: 1079,
+        price: "Rs. 1079",
+        strikedoffprice: "Rs. 2699",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/36ya7sn",
+        brand: "Classic Mosquito Net",
+        para: "White & Blue Sheer Mosquito Net",
+        rs: 1049,
+        price: "Rs. 1049",
+        strikedoffprice: "Rs. 2599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3uJV72G",
+        brand: "ELEVANTO",
+        para: "Women Fuchsia Pink Solid Bath Robe",
+        rs: 623,
+        price: "Rs. 623",
+        strikedoffprice: "Rs. 2599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+      {
+        image_url:
+          "https://bit.ly/3qKqV5Y",
+        brand: "Florida",
+        para: "Yellow & Blue Cartoon Bedsheet",
+        rs: 554,
+        price: "Rs. 554",
+        strikedoffprice: "Rs. 1599",
+        offer: "(65% OFF)",
+        wishList: "WISHLIST",
+        addToBag: "ADD TO BAG",
+      },
+
+    ];
+
+
+    var wishList = JSON.parse(localStorage.getItem("wishListObj")) || [];
+
+    var bagList = JSON.parse(localStorage.getItem("BagListObj")) || [];
+
+    window.addEventListener('load', function () {
+      displayPage(funitureData)
+    })
+
+    document.getElementById('nameSort').addEventListener('change', sortNames);
+    function sortNames() {
+      var selected = document.getElementById('nameSort').value;
+      if (selected == 'asc') {
+        funitureData.sort(function (a, b) {
+          if (a.brand > b.brand) return 1
+          if (a.brand < b.brand) return -1
+          return 0;
+        })
+
+        displayPage(funitureData);
+      }
+      else {
+        funitureData.sort(function (a, b) {
+          if (a.brand > b.brand) return -1
+          if (a.brand < b.brand) return 1
+          return 0
+        })
+
+        displayPage(funitureData)
+      }
+    }
+
+    document.getElementById('priceSort').addEventListener('change', sortPrice);
+    function sortPrice() {
+      var selected = document.getElementById('priceSort').value;
+      if (selected == 'lth') {
+        funitureData.sort(function (a, b) {
+          return a.rs - b.rs;
+        })
+        displayPage(funitureData);
+      }
+      else {
+        funitureData.sort(function (a, b) {
+          return b.rs - a.rs
+        })
+        displayPage(funitureData)
+      }
+    }
+
+    document.getElementById('brandFilter').addEventListener('change', filterBrand);
+    function filterBrand() {
+      var selected = document.getElementById('brandFilter').value
+      var newArray = funitureData.filter(function (element) {
+        if (element.brand == selected) {
+          return element;
+        }
+      })
+      displayPage(newArray);
+    }
+
+
+
+    function displayPage(funitureData) {
+
+      document.getElementById("container").innerHTML = "";
+
+      //  total
+
+      funitureData.map(function (element) {
+
+        var box = document.createElement("div")
+        box.style.cursor = "pointer"
+
+        var img = document.createElement("img")
+        img.src = element.image_url
+
+        var contentBox = document.createElement('div');
+        contentBox.setAttribute('class', 'contentBox')
+
+        var brand = document.createElement("h4")
+        brand.textContent = element.brand
+
+        var para = document.createElement("p")
+        para.textContent = element.para
+
+        var mix = document.createElement("div")
+        mix.setAttribute("class", "mixbox")
+
+        var price = document.createElement("p")
+        price.textContent = element.price
+
+        var strikeprice = document.createElement("p")
+        strikeprice.textContent = element.strikedoffprice
+        strikeprice.setAttribute("class", "strikep")
+
+        var offer = document.createElement("p")
+        offer.textContent = element.offer
+        offer.setAttribute("class", "offerp")
+
+        mix.append(price, strikeprice, offer)
+
+        var wishList = document.createElement("p")
+        wishList.setAttribute("class", "wishListp")
+        wishList.textContent = element.wishList
+        wishList.style.cursor = "pointer"
+
+        wishList.addEventListener("click", function () {
+          addToWishlist(element)
+          wishList.style.color = "green"
+          wishList.innerText = "ADDED TO WISHLIST"
+        })
+
+        var addToBag = document.createElement("p")
+        addToBag.setAttribute("class", "addToBagp")
+        addToBag.textContent = element.addToBag;
+        addToBag.style.cursor = "pointer"
+
+
+        addToBag.addEventListener("click", function () {
+          addToBaglist(element)
+          addToBag.innerText = "ADDED TO BAG"
+        })
+
+        contentBox.append(brand, para, mix, wishList, addToBag)
+
+        box.append(img, contentBox)
+
+        document.querySelector("#container").append(box)
+
+      })
+
+      // total end
+    }
+
+
+
+    function addToWishlist(element) {
+      wishList.push(element)
+      localStorage.setItem("wishListObj", JSON.stringify(wishList))
+    }
+
+    function addToBaglist(element) {
+      bagList.push(element)
+      localStorage.setItem("BagListObj", JSON.stringify(bagList))
+    }
+
+    // Filter
+
+
+
+    // LANDING PAGE
+    document.getElementById('landingPage').addEventListener('click', function () {
+      window.location.href = "../mainpage/mainpage.xhtml"
+    })
+    document.querySelector(".fa-heart").addEventListener("click", function () {
+      window.location.href = "../wishlist/wishlist.xhtml"
+    })
+    document.querySelector(".fa-bag-shopping").addEventListener("click", function () {
+      window.location.href = "../wishlist/cart.xhtml"
+    })
+
+    // document.getElementById("normal").addEventListener("click" , function(){
+    //   window.location.reload()
+    // })
+
+    var all = document.getElementById("brandFilter").value
+
+    if (all == "all") {
+      window.location.reload
+    }
+//]]>
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ChicCart-Sign Up</title>
+        <link rel="shortcut icon" type="image/png" href="logo.png"/>
+        <link rel="stylesheet" href="profile_page.css"/>
+        <link rel="stylesheet" href="styleforhomepages.css"/>
+        <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+        <style>
+          #search #search_icon{
+                top: unset;
+            }
+          #boxbody{
+              margin-top: 15rem;
+            }
+          h3{
+              margin-top: 1.5rem;
+              font-size: 1.5rem;
+          }
+          textarea{
+            padding: 10px  10px 20px;
+            margin-top:20px ;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           }
+        </style>
+    </head>
+    <body >
+        <!-- MENU BAR -->
+        <header style="background:url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+            <div id="logo">
+                <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+            </div>
+           <ul id="nav_bar">
+               <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+               <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+               <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+               <li><a href="../homepages/homeLiving.xhtml">home &amp; living</a></li>
+               <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+           </ul> 
+           <div id="search">
+               <input type="text" id="search_bar" placeholder="Search for products, brands and more"/>
+               <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+           </div>
+           <div id="right_icon">
+               <div id="reggDropdown">
+                   <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+                 <div id="drop">
+                     <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                     <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+                 </div>
+                 <i class="fa-regular fa-user" ></i>
+                   <span>profile</span>
+               </div>
+               <div onclick="wishlist_icon()">
+                   <i class="fa-regular fa-heart" ></i>
+                   <span>wishlist</span>
+               </div>
+               <div onclick="bag_icon()">
+                   <i class="fa-solid fa-bag-shopping"></i>
+                   <span>Cart</span>
+               </div>
+           </div>
+   </header>
+        <div id="boxbody">        
+            <div class="imgbo">
+                    <img src="discount.jpg" alt=""/>
+            </div>
+           <div class="signin">  
+               <h2> SignUp</h2>
+               <h3>Name</h3>
+               <input type="text" id ="name" placeholder="Enter Name"/>
+               <span id="nameId"></span>  
+               <h3>Mobile</h3>
+               <input type="tel" placeholder="Mobile Number*" id="mob"/>
+               <span id="mobileId"></span>
+               <h3>Address</h3>
+               <textarea name="text" id="textid" cols="45" rows="3" placeholder="&emsp;Enter your address*"></textarea>
+               <span id="text"></span>
+               <h3>Email</h3>
+               <input type="mail" id ="mail" placeholder="Enter Email"/>
+               <span id="mailId"></span>
+               <h3>Password</h3>
+               <input type="password" id ="pass" placeholder="Create a Password"/>
+               <span id="passId"></span>
+               <p>By continuing, I agree to the <span> Terms of     Use </span> and <span>privacy policy</span>  </p>
+               <button id="signup_button" onclick="signUp()">continue</button>
+                 <p>Have trouble logging in?<span> Get help</span> </p>
+                 <p>Already have an account ? <a href="profile_page.xhtml" id="sign">Login</a></p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function wishlist_icon(){
+            window.location.href="../wishlist/wishlist.xhtml"
+        }
+        function bag_icon(){
+            window.location.href="../wishlist/cart.xhtml"
+        }
+        var userdata =JSON.parse(localStorage.getItem("userarr")) ||[];
+        function signUp(){
+            //<![CDATA[
+            //name validation
+            var name_valid=document.getElementById('name').value;
+            if(name_valid==""){
+                document.getElementById('nameId').innerHTML="<span style='color:red;font-size:12px'>Please enter a valid name*</span>";
+                return false;
+            }
+            else{
+                document.getElementById('nameId').value="";
+            }
+            //mobile validation
+            var mobile_valid=document.getElementById('mob').value;
+            var num=/^\d{10}$/;
+            if(!mobile_valid.match(num)){
+                document.getElementById('mobileId').innerHTML="<span style='color:red;font-size:12px'>Please enter a valid mobile number*</span>";
+                return false;
+            }
+            else{
+                document.getElementById('mobileId').value="";
+            }
+            //address validation
+            var address_valid=document.getElementById('textid').value;
+            if(address_valid==""){
+                document.getElementById('text').innerHTML="<span style='color:red;font-size:12px'>Please enter your address*</span>";
+                return false;
+            }
+            else{
+                document.getElementById('text').value="";
+            }
+            //mail validation
+            var mail_valid=document.getElementById('mail').value;
+            if(!mail_valid.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+                document.getElementById('mailId').innerHTML="<span style='color:red;font-size:12px'>Please enter a valid email address*</span>";
+                return false;
+            }
+            else{
+                document.getElementById('mailId').value="";
+            }
+            //password validation
+            var pass_valid=document.getElementById('pass').value;
+            if (pass_valid==""){
+                document.getElementById('passId').innerHTML="<span style='color:red;font-size:12px'>Please enter a valid password*</span>";
+                return false;
+            }
+            else{
+                document.getElementById('passId').value="";
+            }
+            var userobj ={
+                name_valid:name_valid,
+                mobile_valid:mobile_valid,
+                address_valid:address_valid,
+                mail_valid:mail_valid,
+                pass_valid:pass_valid
+               };
+            userdata.push(userobj);
+            localStorage.setItem("userarr",JSON.stringify(userdata));
+            document.getElementById("name").value="";
+            document.getElementById("mail").value="";
+            document.getElementById("textid").value="";
+            document.getElementById("pass").value="";
+            document.getElementById("mob").value="";
+            window.location.href="successLoginGif.xhtml"
+           //]]>
+        }
+    </script>
+</html>

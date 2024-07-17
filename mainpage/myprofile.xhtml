@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Chiccart-My Profile</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styleforhomepages.css" />
+    <style>
+        .box{
+            margin: auto;
+            margin-top: 150px;
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            padding:20px;
+        }
+        .leftbox{
+            width: 50%;
+            padding: 20px;
+            flex-direction: column;
+            border:2px solid #e9e9ed;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-size: 17px;
+            background-color: #f8f8fc;
+        }
+        .image_place{
+            width: 10px;
+            height:10px;
+            display: inline;
+            float: left;
+        }
+        .name_place{
+            margin-left: 80px;
+        }
+        #name{
+            width:40%;
+            display: inline-block;
+            align-items: center;
+        }
+        table{
+            margin-top: 60px;
+        }
+        .rightbox{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-image: url(https://i.pinimg.com/originals/2a/e4/3c/2ae43c51449d2c92f57eecdd63c85521.jpg);">
+    <!-- MENU BAR -->
+    <header
+        style="background-image: url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+        <div id="logo">
+            <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo"
+                    style="height: 110px; width:110px" /></a>
+        </div>
+        <ul id="nav_bar">
+            <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+            <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+            <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+            <li><a href="../homepages/homeLiving.xhtml">home &amp; living</a></li>
+            <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+        </ul>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more" />
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+                <div id="drop">
+                    <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                    <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+                </div>
+                <i class="fa-regular fa-user"></i>
+                <span>profile</span>
+            </div>
+            <div onclick="wishlist_icon()">
+                <i class="fa-regular fa-heart"></i>
+                <span>wishlist</span>
+            </div>
+            <div onclick="bag_icon()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Cart</span>
+            </div>
+        </div>
+    </header>
+    <!--Profile page and discount part-->
+    <div class="box">
+        <div class="leftbox">
+            <h3> MY CHICCART ACCOUNT</h3>
+            <br/>
+            <div id="name">
+                <div class="image_place"><img src="profile_pic.jpg" alt="image not found" height="60px" width="60px" />
+                </div>
+                <div class="name_place">
+                    <h4 id="Name" style="font-size: 20px;margin-top:20px"></h4>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th align="left">Mail</th>
+                    <td><span id="gmail"></span></td>
+                </tr>
+                <tr>
+                    <td><br/></td>
+                </tr>
+                <tr>
+                    <th align="left">Address </th>
+                    <td><span id="adrr"></span></td>
+                </tr>
+                <tr>
+                    <td><br/></td>
+                </tr>
+                <tr>
+                    <th align="left">Mobile No. </th>
+                    <td><span id="phn"></span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="rightbox">
+            <a href="../homepages/beautyhomepage.xhtml"><img src="../paymentpage/discount_pic.jpg" alt="img not found" height="300px" width="500px"/></a>
+        </div>
+    </div>
+    <!-- FOOTER SECTION -->
+    <footer>
+        <section id="section_1">
+            <div id="left">
+                <div>
+                    <h4>online shopping</h4>
+                    <p>men</p>
+                    <p>women</p>
+                    <p>home &amp; living</p>
+                    <p>beauty</p>
+                    <p>gift cards</p>
+                </div>
+                <div>
+                    <h4>useful links</h4>
+                    <p>men</p>
+                    <p>faq</p>
+                    <p>t&amp;c</p>
+                    <p>terms of use</p>
+                    <p>track order</p>
+                    <p>shipping</p>
+                    <p>cancellation</p>
+                    <p>returns</p>
+                    <p>whitehat</p>
+                    <p>blog</p>
+                    <p>careers</p>
+                    <p>privacy policy</p>
+                    <p>site map</p>
+                    <p>corporate information</p>
+                </div>
+                <div>
+                    <h4>experience chiccart app on mobile</h4>
+                    <img src="https://bit.ly/3LluZ4L" alt="android" />
+                    <img src="https://bit.ly/3DmWQys" alt="ios" />
+                    <h4 id="social_connect">keep in touch</h4>
+                    <div>
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <img src="https://bit.ly/3JPiL47" alt="original" />
+                    <p> <span>100% ORIGINAL</span> guarantee for all products at chiccart.com</p>
+                </div>
+                <div>
+                    <img src="https://bit.ly/3uBalH4" alt="return_policy" />
+                    <p><span>Return within 30days</span> of receiving your order</p>
+                </div>
+            </div>
+        </section>
+        <section id="section_4">
+            <p>In case of any concern <a href="../paymentpage/contactus.xhtml"> contact us</a></p>
+            <p>&#169; 2023 www.chiccart.com. All rights reserved.</p>
+        </section>
+    </footer>
+</body>
+<script>
+    var adr=JSON.parse(localStorage.getItem("userarr")) || [];
+    var a=adr.length-1;
+    document.getElementById('gmail').innerHTML=adr[a].mail_valid
+    document.getElementById('Name').innerHTML=adr[a].name_valid
+    document.getElementById('adrr').innerHTML=adr[a].address_valid;
+    document.getElementById('phn').innerHTML=adr[a].mobile_valid;
+</script>
+
+</html>

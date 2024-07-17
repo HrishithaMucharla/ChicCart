@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="adresspage.css"/>
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <title>Address | Checkout</title>
+</head>
+<body>
+    <div id="navbar" style="background:url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+        <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+            <div id="div2">
+                <h5 id="first" style="font-size:15px;"><a href="../wishlist/cart.xhtml">CART</a></h5>
+                <div class="line"></div>
+                <h5 style="font-size: 15px;">ADDRESS</h5>
+                <div class="line"></div>
+                <h5 id="third" style="font-size:15px;"><a href="../paymentpage/paymentpage.xhtml">PAYMENT</a></h5>
+            </div>
+        <div id="div3">
+            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt=""/>
+            <p>100&percnt;<strong>SECURE</strong></p>
+        </div>
+    </div>
+    <div id="cart">
+        <div id="div">
+            <h3>SELECT ADDRESS</h3>
+            <h5>DEFAULT ADDRESS</h5>
+            <div id="profile_box">
+                <div id="name">
+                    <div class="image_place"><img src="profile_pic.jpg" alt="image not found" height="60px" width="60px"/></div>
+                    <div class="name_place">
+                        <h4 id="Name" style="font-size: 20px;"></h4>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th align="left">Mail</th>
+                        <td><span id="gmail"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="left">Address </th>
+                        <td><span id="adrr"></span></td>
+                    </tr>
+                    <tr>
+                        <th align="left">Mobile No. </th>
+                        <td><span id="phn"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <p id="up_adr"></p>
+            <div id="add">
+                <input id="new_addr" size="70px"  style="border: hidden;" placeholder="Add New Address"/>
+                &emsp;
+                <button style="border-radius: 3px; border:1px solid lavender ;cursor:pointer; background-color:lavender; color:black;font-size:15px">Add Address</button>
+            </div>
+        </div>
+        <div id="checkDiv">
+            <div id="itemDiv">
+                <h5>DELIVERY ESTIMATES</h5>
+                Delivery Between 21st June to 24th June
+                <br/>
+            </div>
+            <a href="paymentpage.xhtml"> <div id="place">
+            CONTINUE
+         </div></a>
+        </div>
+    </div>
+    <script>
+        var adr=JSON.parse(localStorage.getItem("userarr")) || [];
+        var a=adr.length-1;
+        document.getElementById('gmail').innerHTML=adr[a].mail_valid
+        document.getElementById('Name').innerHTML=adr[a].name_valid
+        document.getElementById('adrr').innerHTML=adr[a].address_valid;
+        document.getElementById('phn').innerHTML=adr[a].mobile_valid;
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="otp_page.css" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <title>OTP</title>
+</head>
+<body>
+    <div id="otpDiv">
+        <img src="otp_image.png"
+            alt="image not found" />
+        <div id="otpline">
+            <h2>Verify with OTP</h2>
+            <p>Sent to registered Mobile No.
+            <p id="otpNum"></p>
+            </p>
+        </div>
+        <div id="inputDiv">
+            <input id="otp1" type="tel" maxlength="1" />
+            <input id="otp2" type="tel" maxlength="1" />
+            <input id="otp3" type="tel" maxlength="1" />
+            <input id="otp4" type="tel" maxlength="1" />
+        </div>
+        <span id="error" style="color: red;margin-left:120px"></span>
+        <br/>
+        <button id="checkotp" onclick="confirm_page()" style="cursor: pointer;">CONFIRM</button>
+        <div id="checkDiv">
+            <p>Did not recieve otp?<a href="#" style="color:red" onclick="sendotp()"> RESEND OTP</a></p>
+        </div>
+    </div>
+    <script>
+        function confirm_page(){
+            var otp_1=document.getElementById("otp1").value
+            var otp_2=document.getElementById("otp2").value
+            var otp_3=document.getElementById("otp3").value
+            var otp_4=document.getElementById("otp4").value
+            if(!otp_1)
+            {
+                document.getElementById('error').innerHTML="Please enter a valid otp"
+                return false;
+            }
+            else if(!otp_2)
+            {
+                document.getElementById('error').innerHTML="Please enter a valid otp"
+                return false;
+            }
+            else if(!otp_3)
+            {
+                document.getElementById('error').innerHTML="Please enter a valid otp"
+                return false;
+            }
+            else if(!otp_4)
+            {
+                document.getElementById('error').innerHTML="Please enter a valid otp"
+                return false;
+            }
+            else{
+                window.location.href="end_page.xhtml"
+            }     
+        }
+        function sendotp(){
+            confirm('Otp has sent to your mobile number')
+        }
+    </script>
+</body>
+
+</html>

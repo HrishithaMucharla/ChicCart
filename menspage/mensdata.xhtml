@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Chiccart-the destination for aesthics everywhere</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
+    <link rel="stylesheet" href="mens.css" />
+    <link rel="stylesheet" href="styleforhomepages.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+</head>
+<body>
+    <!-- MENU BAR -->
+    <header style="background-image: url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+       <div id="logo">
+        <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+       </div>
+       <ul id="nav_bar">
+           <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+           <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+           <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+           <li><a href="../homepages/homeLiving.xhtml">home &amp; living</a></li>
+           <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+
+       </ul> 
+       <div id="search">
+           <input type="text" id="search_bar" placeholder="Search for products, brands and more"/>
+           <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+       </div>
+       <div id="right_icon">
+           <div id="reggDropdown">
+               <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+             <div id="drop">
+                 <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                 <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+             </div>
+             <i class="fa-regular fa-user" ></i>
+               <span>profile</span>
+           </div>
+           <div onclick="wishlist_icon()">
+               <i class="fa-regular fa-heart" ></i>
+               <span>wishlist</span>
+           </div>
+           <div onclick="bag_icon()">
+               <i class="fa-solid fa-bag-shopping"></i>
+               <span>Cart</span>
+           </div>
+       </div>
+</header>
+
+<div id="sorting">
+
+    <select class="filter" id="brandFilter">
+        <option id="normal" value="all">FILTER BY BRAND</option>
+        <option value="U.S. Polo Assn.">U.S. Polo Assn.</option>
+        <option value="Roadster">Roadster</option>
+        <option value="KLOTTHE">KLOTTHE</option>
+        <option value="Mast Harbour">Mast  Harbour</option>
+        <option value="PUMA">PUMA</option>
+        <option value="WROGN">WROGN</option>
+        <option value="HRX by Hrithik Roshan">HRX by Hrithik Roshan</option>
+        <option value="Flying Machine">Flying Machine</option>         
+      </select>
+
+    <select class="filter" id="priceSort">
+        <option value="---">SORT BY PRICE</option>
+        <option value="lth">Low → High</option>
+        <option value="htl">High → Low</option>
+      </select>
+
+    <select class="filter" id="nameSort">
+        <option value="---">SORT BY NAME</option>
+        <option value="asc">Ascending</option>
+        <option value="dsc">Descending</option>
+      </select>
+
+</div>
+
+
+<div id="wrapper">
+    <div id="filter">
+        <div class="a">
+            <h3>FILTERS </h3>
+            <div>
+                <input type="radio" id="sagar" name="group" />
+                <label for="sagar">Men</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">Women</label><br/>
+                <input type="radio" id="rb" name="group" />
+                <label for="rb">Boys</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">Girls</label>
+            </div>
+
+        </div>
+        <div class="b">
+            <h3>CATEGORIES</h3>
+            <div>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Tshirts</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Shirts</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Casual Shoes</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Sweatshirts</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Jackets</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Trousers</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Slippers</label><br/>
+                <input type="checkbox" id="cb" name="group" />
+                <label for="cb">Flip Flops</label>
+            </div>
+
+        </div>
+       
+        <div class="b">
+            <h3>PRICE</h3>
+            <div>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Rs 499 to Rs 1349</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Rs. 1349 to Rs. 2199</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Rs. 2199 to Rs. 3049</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Rs. 3049 to Rs. 3899</label><br/>
+            </div>
+
+        </div>
+        <div class="b">
+            <h3>COLOR</h3>
+            <div>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Blue</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Navy Blue</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Black</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">White</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Grey</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Red</label><br/>
+                <input type="checkbox" id="cb" name="group"/>
+                <label for="cb">Green</label><br/>
+            </div>
+
+        </div>
+        <div class="c">
+            <h3>DISCOUNT RANGE</h3>
+            <div>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">10% and above</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">20% and above</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">30% and aboves</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">40% and above</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">50% and above</label><br/>
+                <input type="radio" id="rb" name="group"/>
+                <label for="rb">60% and above</label><br/>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="container"></div>
+</div>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <section id="section_1">
+        <div id="left">
+            <div>
+                <h4>online shopping</h4>
+                <p>men</p>
+                <p>women</p>
+                <p>home living</p>
+                <p>beauty</p>
+                <p>gift cards</p>
+            </div>
+            <div>
+            <h4>useful links</h4>
+            <p>men</p>
+            <p>faq</p>
+            <p>tc</p>
+            <p>terms of use</p>
+            <p>track order</p>
+            <p>shipping</p>
+            <p>cancellation</p>
+            <p>returns</p>
+            <p>whitehat</p>
+            <p>blog</p>
+            <p>careers</p>
+            <p>privacy policy</p>
+            <p>site map</p>
+            <p>corporate information</p>
+            </div>
+            <div>
+                <h4>experience chiccart app on mobile</h4>
+                <img src="https://bit.ly/3LluZ4L" alt="android"/>
+                <img src="https://bit.ly/3DmWQys" alt="ios" />
+                <h4 id="social_connect">keep in touch</h4>
+                <div>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div>
+                <img src="https://bit.ly/3JPiL47" alt="original"/>
+                <p> <span>100&percnt; ORIGINAL</span> guarantee for all products at chiccart.com</p>
+            </div>
+            <div>
+                <img src="https://bit.ly/3uBalH4" alt="return_policy"/>
+                <p><span>Return within 30days</span> of receiving your order</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="section_4">
+        <p>In case of any concern <a href="../paymentpage/contactus.xhtml"> contact us</a></p>
+        <p>&#169; 2023 www.chiccart.com. All rights reserved.</p>
+    </section>
+</footer>
+<script>
+    //<![CDATA[
+    function wishlist_icon(){
+        window.location.href="../wishlist/wishlist.xhtml"
+    }
+    function bag_icon(){
+        window.location.href="../wishlist/cart.xhtml"
+    }
+
+    var productData = [{
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10331501/2020/3/18/d4d07c60-88d9-43d9-aa78-9cc7712816321584508934272-US-Polo-Assn-Men-White-Colourblocked-Sneakers-84015845089331-1.jpg",
+    brand: "U.S. Polo Assn.",
+    para: "Men Colourblocked Sneakers",
+    price: "Rs. 1799",
+    rs: 1799,
+    strikedoffprice: "Rs 2999",
+    offer: "(40% OFF) ",
+    wishList:"WISHLIST",
+    addToBag:"ADD TO BAG",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13031344/2021/2/15/edb298bb-2c55-4b17-be70-b99fa7da98af1613389238510-US-Polo-Assn-Men-Navy-Blue-Printed-Sliders-7711613389237151-1.jpg ",
+    brand: "U.S. Polo Assn.",
+    para: "Men Printed Sliders",
+    price: "Rs. 674",
+    rs: 674,
+    strikedoffprice: "Rs 1499",
+    offer: "(55% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Slippers",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13640716/2021/5/24/48e9e3bc-8fb7-4af5-97fa-46927f68fbd81621838454680JeansRoadsterMenJeansRoadsterMenTrackPantsHRXbyHrithikRoshan1.jpg ",
+    brand: "U.S. Polo Assn.",
+    para: "Printed Polo Collar Pure Cotton T-Shirt",
+    price: "Rs. 1259",
+    rs: 1259,
+    strikedoffprice: "Rs 2099",
+    offer: "(40% OFF)",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Tshirts",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10339033/2019/8/6/df9a712b-a5fc-4a65-870a-0854fb50ea221565093150139-US-Polo-Assn-Men-Casual-Shoes-7391565093148433-1.jpg ",
+    brand: "U.S. Polo Assn.",
+    para: "Men Sneakers",
+    price: "Rs. 1949",
+    rs: 1949,
+    strikedoffprice: "Rs 2999 ",
+    offer: "(35% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10339001/2020/2/28/5d620291-a732-4d17-9f52-baa24bb7a81f1582871965483-US-Polo-Assn-Men-Flip-Flops-2741582871964051-1.jpg ",
+    brand: "U.S. Polo Assn.",
+    para: "Men Printed Thong Flip-Flops ",
+    price: "Rs. 599 ",
+    rs: 599,
+    strikedoffprice: "Rs 999 ",
+    offer: "(40% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Flip Flops",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11391306/2020/2/12/10b9eea6-35be-4b7d-8c39-826d4d3500c11581485549564-US-Polo-Assn-Men-Casual-Shoes-4671581485548936-1.jpg ",
+    brand: "Roadster",
+    para: "Men Colourblocked Sneakers ",
+    price: "Rs. 1649 ",
+    rs: 1649,
+    strikedoffprice: "Rs 2999 ",
+    offer: "(45% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14406190/2021/7/13/c8352e58-003d-464f-a6ce-0428e35870461626156229629-U-S-Polo-Assn-Men-Navy-Blue-PU-Sneakers-4661626156229266-1.jpg ",
+    brand: "Roadster",
+    para: "Men Colourblocked Sneakers ",
+    price: "Rs. 1799 ",
+    rs: 1799,
+    strikedoffprice: "Rs 2999 ",
+    offer: "(40% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14406190/2021/7/13/c8352e58-003d-464f-a6ce-0428e35870461626156229629-U-S-Polo-Assn-Men-Navy-Blue-PU-Sneakers-4661626156229266-1.jpg ",
+    brand: "Roadster",
+    para: "Men Colourblocked Sneakers ",
+    price: "Rs. 1799 ",
+    rs: 1799,
+    strikedoffprice: "Rs 2999 ",
+    offer: "(40% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14367616/2021/8/12/07269c5b-cd27-4716-9709-583e7eac513d1628768262239-US-Polo-Assn-Men-White-LEBRON-20-Walking-Shoes-3021628768261-1.jpg ",
+    brand: "Roadster",
+    para: "Men LEBRON 2.0 Walking Shoes ",
+    price: "Rs. 1999 ",
+    rs: 1999,
+    strikedoffprice: "Rs 3999 ",
+    offer: "(50% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+}, {
+    image_url: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13031362/2021/1/19/8814b6d0-5393-4a14-ae1d-ebea39114cde1611035283580-US-Polo-Assn-Men-Casual-Shoes-1901611035282050-1.jpg ",
+    brand: "KLOTTHE",
+    para: "Men AARON 2.0 Driving Shoes ",
+    price: "Rs. 1799 ",
+    rs: 1799,
+    strikedoffprice: "Rs 2999 ",
+    offer: "(40% OFF) ",
+    atc: "Add to Bag",
+    atw: "Add to Whishlist",
+    category: "Casual Shoes",
+}, ];
+
+
+var wishListData = JSON.parse(localStorage.getItem("wishListObj")) || []
+
+var bagData = JSON.parse(localStorage.getItem("BagListObj")) || []
+
+window.addEventListener('load', function() {
+    displayPage(productData)
+})
+
+document.getElementById('nameSort').addEventListener('change', sortNames);
+
+function sortNames() {
+    var selected = document.getElementById('nameSort').value;
+    if (selected == 'asc') {
+        productData.sort(function(a, b) {
+            if (a.brand > b.brand) return 1
+            if (a.brand < b.brand) return -1
+            return 0;
+        })
+
+        displayPage(productData);
+    } else {
+        productData.sort(function(a, b) {
+            if (a.brand > b.brand) return -1
+            if (a.brand < b.brand) return 1
+            return 0
+        })
+
+        displayPage(productData)
+    }
+}
+
+document.getElementById('priceSort').addEventListener('change', sortPrice);
+
+function sortPrice() {
+    var selected = document.getElementById('priceSort').value;
+    if (selected == 'lth') {
+        productData.sort(function(a, b) {
+            return a.rs - b.rs;
+        })
+        displayPage(productData);
+    } else {
+        productData.sort(function(a, b) {
+            return b.rs - a.rs;
+        })
+        displayPage(productData)
+    }
+}
+
+document.getElementById('brandFilter').addEventListener('change', filterBrand);
+
+function filterBrand() {
+    var selected = document.getElementById('brandFilter').value
+    var newArray = productData.filter(function(element) {
+        if (element.brand == selected) {
+            return element;
+        }
+    })
+    displayPage(newArray);
+}
+
+
+function displayPage(productData) {
+
+    document.getElementById("container").innerHTML = "";
+
+    productData.map(function(elem) {
+        var box = document.createElement("div")
+        box.style.cursor = "pointer"
+
+        var img = document.createElement("img")
+        img.src = elem.image_url
+
+        var contentBox = document.createElement('div');
+        contentBox.setAttribute('class', 'contentBox')
+
+        var brand = document.createElement("h4")
+        brand.textContent = elem.brand
+
+        var productname = document.createElement("p")
+        productname.textContent = elem.para
+
+
+        var mix = document.createElement("div")
+        mix.setAttribute("class", "mixbox")
+
+
+        var price = document.createElement("p")
+        price.textContent = elem.price
+
+        var strprice = document.createElement("p")
+        strprice.textContent = elem.strikedoffprice
+        strprice.setAttribute("class", "strikep")
+
+
+        var offer = document.createElement("p")
+        offer.textContent = elem.offer
+        offer.setAttribute("class", "offerp")
+
+        mix.append(price, strprice, offer)
+
+        
+
+        var atw = document.createElement("p")
+        atw.setAttribute("class", "wishListp")
+        atw.textContent = elem.atw;
+        atw.style.cursor = "pointer"
+
+        atw.addEventListener("click", function() {
+            addToWishlist(elem)
+            atw.style.color = "green"
+            atw.innerText = "ADDED TO WISHLIST"
+        })
+           
+        var atc = document.createElement("p")
+        atc.setAttribute("class", "addToBagp")
+        atc.textContent = elem.atc;
+        atc.style.cursor = "pointer"
+
+        atc.addEventListener("click", function() {
+            addToBag(elem)
+            atc.innerText = "ADDED TO BAG"
+        })
+
+        contentBox.append(brand, productname, mix, atw, atc)
+
+        box.append(img, contentBox)
+
+        document.querySelector("#container").append(box);
+    });
+
+}
+function addToWishlist(element) {
+    // console.log(element)
+    wishListData.push(element)
+    localStorage.setItem("wishListObj", JSON.stringify(wishListData))
+}
+
+function addToBag(element) {
+    // console.log(element)
+    bagData.push(element)
+    localStorage.setItem("BagListObj", JSON.stringify(bagData))
+}
+
+document.getElementById('landingPage').addEventListener('click', function() {
+window.location.href = "../mainpage/mainpage.xhtml"
+}) 
+
+function wishlist_icon(){
+    window.location.href="../wishlist/wishlist.xhtml"
+}
+function bag_icon(){
+    window.location.href="../wishlist/cart.xhtml"
+}
+    //]]>
+</script>
+</body>
+</html>

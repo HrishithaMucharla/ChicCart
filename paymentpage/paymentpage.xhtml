@@ -1,0 +1,124 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="payment.css" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+    <title>Payment|address</title>
+</head>
+<body >
+    <div id="navbar" style="background:url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+        <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" style="height: 110px; width:110px" /></a>
+        <div id="nav2">
+            <h5 id="first"><a href="../wishlist/cart.xhtml">CART</a></h5>
+            <div class="line"></div>
+            <h5 id="second"><a href="../paymentpage/adresspage.xhtml">ADDRESS</a></h5>
+            <div class="line"></div>
+            <h5 style="font-size: 17px;">PAYMENT</h5>
+        </div>
+        <div id="nav3">
+            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="img not found" />
+            <p>&emsp;100 &percnt; <b>SECURE</b></p>
+        </div>
+    </div>
+    <p></p>
+    <div id="cart" >
+        <div id="main1">
+            <div>
+                <h4>Bank Offer</h4>
+                <p>10% Instant Discount with Standard Chartered Credit &amp; Debit cards on a min spend of Rs 3,000. TCA
+                </p>
+                <P>Show More&emsp; <i class="fa-solid fa-angle-down"></i></P>
+                <p></p>
+            </div>
+            <h4>Choose Payment Mode</h4>
+            <div id="payment">
+                <div id="mode">
+                    <div onclick="myfunc1()">
+                        <i class="fa-brands fa-amazon-pay"></i>
+                        <h5 id="cash1">Cash On Delivery (Cash/Card/UPI)</h5>
+                    </div>
+                    <div id="card" onclick="myfunc2()">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h5 id="cash2">Credit/Debit Card</h5>
+                    </div>
+                    <div onclick="myfunc3()">
+                        <i class="fa-brands fa-cc-amazon-pay"></i>
+                        <h5 id="cash3">PhonePe/Google Pay/BHIM UPI</h5>
+                    </div>
+                    <div onclick="myfunc4()">
+                        <i class="fa-solid fa-wallet"></i>
+                        <h5 id="cash4">Paytm/Payzapp/Wallets</h5>
+                    </div>
+                    <div onclick="myfunc5()">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h5 id="cash5">Net Banking</h5>
+                    </div>
+                    <div onclick="myfunc6()">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <h5 id="cash6">EMI/Pay Later</h5>
+                    </div>
+                </div>
+                <div id="paymentDiv">
+                    <h4 id="write">Cash On Delivery</h4>
+                    <a href="otp_page.xhtml">
+                        <div id="pay">
+                            PAY
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="orderbox">
+            <div class="pricedets">PRICE DETAILS</div>
+            <div class="total">
+                <span>Total MRP</span><span class="totalprice">--</span>
+            </div>
+            <div class="discount">
+                <span>Discount on MRP</span><span class="filldiscount">--</span>
+            </div>
+            <div class="amount">
+                <span>Total Amount</span><span class="amount_pay">--</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myfunc1(){
+            document.getElementById('write').innerHTML=document.getElementById('cash1').innerHTML
+        }
+        function myfunc2(){
+            document.getElementById('write').innerHTML=document.getElementById('cash2').innerHTML
+        }
+        function myfunc3(){
+            document.getElementById('write').innerHTML=document.getElementById('cash3').innerHTML
+        }
+        function myfunc4(){
+            document.getElementById('write').innerHTML=document.getElementById('cash4').innerHTML
+        }
+        function myfunc5(){
+            document.getElementById('write').innerHTML=document.getElementById('cash5').innerHTML
+        }
+        function myfunc6(){
+            document.getElementById('write').innerHTML=document.getElementById('cash6').innerHTML
+        }
+        var amount = localStorage.getItem("amount");
+        document.querySelector(".amount_pay").innerText = amount;
+        var MRP = localStorage.getItem("MRP");
+        document.querySelector(".totalprice").innerText = MRP;
+        var discount = localStorage.getItem("discount")
+        document.querySelector(".filldiscount").innerText = "- " + discount;
+        var itemcount = localStorage.getItem("itemcount")
+        document.querySelector(".pricedets").innerText = `PRICE DETAILS ( ${itemcount} Items)`;
+        document.querySelector("#first").addEventListener("click",function(){
+            window.location.href ="../wishlist/cart.html"
+        })
+        document.querySelector("#second").addEventListener("click",function(){
+            window.location.href ="../payment/address.html"
+        })
+    </script>
+</body>
+
+</html>

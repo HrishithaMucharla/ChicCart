@@ -1,0 +1,162 @@
+.mainbox{
+    margin-top: 120px;
+    margin-left: 350px;
+    margin-right: 350px;    
+}
+.headerbox{
+    margin-top: 10px;
+    /*box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;*/
+}
+.leftbox{
+    margin-left: 10px;
+    margin-top: 13px;
+    margin-bottom: 20px;
+    display: inline-block;   
+}
+.leftboxtext{
+    font-size: 20px;
+}
+.leftboxcontent{
+    font-size: 17px;
+    color: grey;
+}
+.rightbox{
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    display: flexbox;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.rightboxleft{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    float: left;
+}
+.rightboxleftheader{
+    font-size: 13px;
+}
+.rightboxleftcontents{
+    font-size: 10px;
+    color: grey;
+}
+.rightboxright{
+    margin-top: 15px;
+    margin-left: 140px;
+    margin-right: 10px;
+    border-radius:  5px; ;
+    border:1px solid rgb(193, 204, 193);
+    box-shadow: rgba(202, 204, 205, 0.05) 0px 0px 0px 1px, rgb(234, 236, 237) 0px 0px 0px 1px inset;
+    float:right;
+}
+.rightboxright a{
+    text-decoration: none;
+    color: black;
+}
+.rightboxrightcontents{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    border-radius: 5pz;
+}
+/*Query box*/
+hr{
+    background-color: beige;
+}
+.querybox{    
+    margin-top: 20px;
+    font-size: 15px;
+    display: table;
+    clear: both;
+}
+.queryquestions{
+    margin-right: 70px;
+    float: left; 
+}
+.query{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.a{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.b{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.c{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.symbola{
+    margin-left: 65px;
+    font-size: 20px;
+}
+.symbolalink{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: rgb(19, 204, 19);
+}
+.symbolb{
+    margin-left: 32px;
+    font-size: 20px;
+}
+.symbolc{
+    margin-left: 117px;
+    font-size: 20px;
+}
+.symbold{
+    margin-left: 25px;
+    font-size: 20px;
+}
+/*answerbox*/
+.queryanswers{
+    float: left;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(240, 248, 250) 0px 0px 0px 1px inset;
+    margin-right: 5px;
+}
+.query1{
+    margin-left: 10px;
+}
+.a1{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.b1{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.c1{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.d1{
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.symbola1{
+    margin-left: 330px;
+    font-size: 25px;
+}
+.symbolalink{
+    text-decoration: none;
+    color: black;
+}
+.symbolb1{
+    margin-left: 250px;
+    font-size: 25px;
+}
+.symbolc1{
+    margin-left: 295px;
+    font-size: 25px;
+}
+.symbold1{
+    margin-left: 398px;
+    font-size: 25px;
+}

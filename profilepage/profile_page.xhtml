@@ -1,0 +1,112 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ChicCart-Login</title>
+    <link rel="stylesheet" href="profile_page.css" />
+    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <link rel="stylesheet" href="styleforhomepages.css"/>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet' />
+</head>
+<body>
+    <!-- MENU BAR -->
+    <header style="background:url(https://img.freepik.com/free-photo/violet-watercolor-texture-background_1083-172.jpg?1);">
+       <div id="logo">
+        <a href="../mainpage/mainpage.xhtml"><img src="logo.png" alt="brandLogo" id="landingPage" style="height: 110px; width:110px"/></a>
+       </div>
+       <ul id="nav_bar">
+           <li id="megamenu_container"><a href="../homepages/menHomePage.xhtml">men</a></li>
+           <li><a href="../homepages/womenHomePage.xhtml">women</a></li>
+           <li><a href="../homepages/kidshomepage.xhtml">kids</a></li>
+           <li><a href="../homepages/homeLiving.xhtml">home &amp; living</a></li>
+           <li><a href="../homepages/beautyhomepage.xhtml">beauty</a></li>
+       </ul> 
+       <div id="search">
+           <input type="text" id="search_bar" placeholder="Search for products, brands and more"/>
+           <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+       </div>
+       <div id="right_icon">
+           <div id="reggDropdown">
+               <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+             <div id="drop">
+                 <a href="../profilepage/profile_page.xhtml" class="dropList">login</a>
+                 <a href="../profilepage/signup_page.xhtml" class="dropList">sign up</a>
+             </div>
+             <i class="fa-regular fa-user" ></i>
+               <span>profile</span>
+           </div>
+           <div onclick="wishlist_icon()">
+               <i class="fa-regular fa-heart" ></i>
+               <span>wishlist</span>
+           </div>
+           <div onclick="bag_icon()">
+               <i class="fa-solid fa-bag-shopping"></i>
+               <span>Cart</span>
+           </div>
+       </div>
+</header>
+    <div id="boxbody">
+        <div class="imgbo">
+            <img src="discount.jpg" alt="" />
+        </div>
+        <div class="signin">
+            <h2>Login</h2>
+            <div>
+                <input type="tel" placeholder="Mobile Number*" id="mob" />
+                <span id="usern"></span>
+                <input type="password" placeholder="Enter password" id="pass" />
+                <span id="passw"></span>
+            </div>
+            <p>By continuing, I agree to the <span> Terms of Use </span> and <span>privacy policy</span> </p>
+
+            <button onclick="login_pagejs()">continue</button>
+            <p>Have trouble logging in?<span> Get help</span> </p>
+            <p>Don't have an account ? <a href="signup_page.xhtml" id="sign">Sign up</a> </p>
+        </div>
+    </div>
+    <script>
+        function wishlist_icon(){
+            window.location.href="../wishlist/wishlist.xhtml"
+        }
+        function bag_icon(){
+            window.location.href="../wishlist/cart.xhtml"
+        }
+        var userdata = JSON.parse(localStorage.getItem("userarr")) || [];
+        function login_pagejs() {
+            //<![CDATA[
+            var mobile_valid = document.getElementById('mob').value;
+            for (var a = userdata.length - 1; a >= 0; a--) {
+                if (mobile_valid == "") {
+                    document.getElementById('usern').innerHTML="<span style='color:red;font-size:12px'>Enter mobile number to login*</span>"
+                    break;
+                }
+                else{
+                    document.getElementById('usern').innerHTML=""
+                }
+                if (mobile_valid == userdata[a].mobile_valid) {
+                    if (checkpass(a)) {
+                        window.location.href="successLoginGif.xhtml"
+                        document.getElementById("mob").value = "";
+                        document.getElementById("pass").value = "";
+                        break;
+                    } else {
+                        document.getElementById('passw').innerHTML="<span style='color:red;font-size:12px'>Wrong password*</span>"
+                        document.getElementById("pass").value = "";
+                        return false;
+                    }
+                }
+                else if (a == userdata.length - 1) {
+                    alert("you dont have account sign up first")
+                    window.location.href = "signup_page.xhtml"
+                }
+            }
+            function checkpass(a){
+                var in_pass =document.getElementById("pass").value;
+                 return ( userdata[a].pass_valid == in_pass)
+              }
+        }
+        //]]>
+    </script>
+</body>
+</html>

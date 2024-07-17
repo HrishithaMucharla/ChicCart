@@ -1,0 +1,90 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiccart-the destination for aesthics everywhere</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" /> <!--Icon for the website favicon-->
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .container {
+            display: block;
+            margin-left: 600px;
+            margin-top: 90px;
+            align-items: center;    
+        }
+        .container2 {
+            margin-left: 610px;
+            align-items: center;
+        }
+        .container3 {
+            margin-left: 554px;
+            align-items: center;   
+        }
+        /*for the live page animations*/
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');/*to use the google fonts*/
+        .paraclass {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: Papyrus, fantasy;
+            font-size: 40px;
+            color: rgb(34, 33, 33);
+            font-weight: bold; 
+        }
+        /* Animation ---chiccart animation*/
+        .paraclass {
+            animation: animated-text 4s steps(29, end) 1s 1 normal both,
+                animated-cursor 600ms steps(29, end) infinite;
+        }
+        .content {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: Gabriola, cursive;
+            font-size: 40px;
+            color: rgb(34, 33, 33);
+            padding: 0;
+        }
+        /* Animation ---animation name--animated-text
+        SYNTAX------->
+        animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        .content {
+            animation: animated-text 4s steps(29, end) 1s 1 normal both,
+                animated-cursor 600ms steps(29, end) infinite;
+            animation-delay: 3s;
+        }
+        /* text animation 
+        The @keyframes rule specifies the animation code.
+The animation is created by gradually changing from one set of CSS styles to another.
+Specify when the style change will happen in percent, or with the keywords "from" and "to", which is the same as 0% and 100%. 0% is the beginning of the animation, 100% is when the animation is complete.*/
+        @keyframes animated-text {
+            from {
+                width: 0;
+            }
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url(https://static.vecteezy.com/system/resources/thumbnails/011/845/226/small_2x/aesthetic-abstract-striped-line-gradient-purple-frame-background-illustration-perfect-for-wallpaper-backdrop-postcard-background-banner-vector.jpg);">
+    <img class="container" src="logo.png" alt="image not found" />
+    <div class="container2">
+        <p class="paraclass">CHICCART</p>
+    </div>
+    <div class="container3">
+        <p class="content">Absolutely - Positively - Perfect</p>
+    </div>
+    <script>
+        window.setTimeout('window.location.href="mainpage.xhtml"; ', 7000);//setTimeout() method calls a function after a number of milliseconds
+    </script>
+</body>
+</html>
